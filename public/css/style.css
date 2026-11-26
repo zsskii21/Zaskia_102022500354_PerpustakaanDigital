@@ -1,0 +1,308 @@
+:root {
+    --moss: #365004;
+    --apple: #8DA432;
+    --flax: #EDE383;
+    --gold: #925E06;
+    --bistre: #351903;
+    --bg: #F6F2D4;
+    --card: #FDFBEF;
+    --line: #DDD39A;
+    --pilih: #E4EDB4;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+    background: var(--bg);
+    color: var(--bistre);
+}
+
+header {
+    background: var(--moss);
+    color: var(--flax);
+    border-bottom: 4px solid var(--apple);
+    padding: 22px 56px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+header h1 {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.7rem;
+    font-weight: 600;
+}
+
+header p { 
+  margin: 4px 0 0; 
+  color: var(--apple); 
+  font-size: .95rem; 
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-size: .95rem;
+}
+
+.user a { 
+  color: var(--flax); 
+  text-underline-offset: 3px; 
+}
+
+.user form { 
+  margin: 0; 
+}
+
+main {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 40px 28px 64px;
+}
+
+h2 {
+    margin: 0 0 16px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.panel {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 24px;
+    margin-bottom: 32px;
+}
+
+.notif {
+    background: var(--pilih);
+    border-left: 6px solid var(--moss);
+    border-radius: 6px;
+    padding: 12px 16px;
+    margin-bottom: 24px;
+}
+
+.galat {
+    background: #F7DCCB;
+    border-left: 6px solid #A33B12;
+    border-radius: 6px;
+    padding: 12px 16px;
+    margin-bottom: 24px;
+}
+
+.galat ul { 
+  margin: 0; 
+  padding-left: 18px; 
+}
+
+.tabel-wrap { 
+  overflow-x: auto; 
+}
+
+table { 
+  width: 100%; 
+  border-collapse: collapse; 
+}
+
+thead th {
+    background: var(--moss);
+    color: var(--flax);
+    text-align: left;
+    padding: 14px 16px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+thead th:first-child { 
+  border-top-left-radius: 8px; 
+}
+
+thead th:last-child { 
+  border-top-right-radius: 8px; 
+}
+
+tbody td {
+    padding: 14px 16px;
+    border-bottom: 1px solid var(--line);
+    vertical-align: middle;
+}
+
+tbody tr { 
+  cursor: pointer; 
+  transition: background .15s; 
+}
+
+tbody tr:hover { 
+  background: #F3EFC4; 
+}
+
+tbody tr.dipilih {
+    background: var(--pilih);
+    box-shadow: inset 6px 0 0 var(--moss), 0 6px 16px rgba(53, 25, 3, .22);
+    position: relative;
+}
+
+.kosong { 
+  text-align: center; 
+  color: var(--gold); 
+  cursor: default; 
+}
+
+.badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 999px;
+    font-size: .85rem;
+    font-weight: 600;
+    background: var(--flax);
+    color: var(--bistre);
+}
+
+.badge.tersedia { 
+  background: var(--apple); 
+  color: var(--bistre); 
+}
+
+.badge.tidak-tersedia { 
+  background: var(--gold); 
+  color: #FFF; 
+}
+
+.aksi { 
+  display: flex; 
+  gap: 8px; 
+  align-items: center; 
+}
+
+.aksi form { 
+  margin: 0; 
+}
+
+.btn {
+    display: inline-block;
+    border: 2px solid transparent;
+    border-radius: 6px;
+    padding: 9px 18px;
+    font-size: .95rem;
+    font-weight: 600;
+    font-family: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn-utama { 
+  background: var(--moss); 
+  color: var(--flax); 
+}
+
+.btn-utama:hover { 
+  background: #2A3F03; 
+}
+
+.btn-ubah { 
+  background: var(--flax); 
+  color: var(--bistre); 
+}
+
+.btn-ubah:hover { 
+  background: #F6EFA6; 
+}
+
+.btn-hapus { 
+  background: var(--card); 
+  color: #A33B12; 
+  border-color: #A33B12; 
+}
+
+.btn-hapus:hover { 
+  background: #A33B12; 
+  color: #FFF; 
+}
+
+.btn-terang { 
+  background: var(--flax); 
+  color: var(--bistre); 
+}
+
+.btn-terang:hover { 
+  background: #F6EFA6; 
+}
+
+.btn-batal { 
+  background: transparent; 
+  color: var(--bistre); 
+  border-color: var(--line); 
+}
+
+.btn-batal:hover { 
+  background: var(--pilih); 
+}
+
+.btn:focus-visible { 
+  outline: 3px solid var(--apple); 
+  outline-offset: 2px; 
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 18px;
+    margin-bottom: 22px;
+}
+
+.field label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: var(--gold);
+}
+
+.field input,
+.field select {
+    width: 100%;
+    padding: 11px 12px;
+    border: 2px solid var(--line);
+    border-radius: 6px;
+    background: #FFF;
+    color: var(--bistre);
+    font-size: 1rem;
+    font-family: inherit;
+}
+
+.field input:hover,
+
+.field select:hover { 
+    border-color: var(--apple); 
+}
+
+.field input:focus,
+
+.field select:focus {
+    outline: none;
+    border-color: var(--moss);
+    background: #F7FAE6;
+    box-shadow: 0 0 0 4px rgba(141, 164, 50, .45), 0 6px 14px rgba(53, 25, 3, .18);
+}
+
+.field .pesan { 
+  color: #A33B12; 
+  font-size: .85rem; 
+  margin-top: 4px; 
+}
+
+.form-aksi { 
+  display: flex; 
+  gap: 10px; 
+}
+
+@media (max-width: 700px) {
+    header { padding: 18px 20px; }
+    main { padding: 28px 16px 48px; }
+}
