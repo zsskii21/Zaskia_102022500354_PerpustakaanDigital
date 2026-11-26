@@ -38,11 +38,7 @@ header h1 {
     font-weight: 600;
 }
 
-header p { 
-  margin: 4px 0 0; 
-  color: var(--apple); 
-  font-size: .95rem; 
-}
+header p { margin: 4px 0 0; color: var(--apple); font-size: .95rem; }
 
 .user {
     display: flex;
@@ -51,14 +47,8 @@ header p {
     font-size: .95rem;
 }
 
-.user a { 
-  color: var(--flax); 
-  text-underline-offset: 3px; 
-}
-
-.user form { 
-  margin: 0; 
-}
+.user a { color: var(--flax); text-underline-offset: 3px; }
+.user form { margin: 0; }
 
 main {
     max-width: 1180px;
@@ -98,17 +88,17 @@ h2 {
 }
 
 .galat ul { 
-  margin: 0; 
-  padding-left: 18px; 
+    margin: 0; 
+    padding-left: 18px; 
 }
 
 .tabel-wrap { 
-  overflow-x: auto; 
+    overflow-x: auto; 
 }
 
 table { 
-  width: 100%; 
-  border-collapse: collapse; 
+    width: 100%; 
+    border-collapse: collapse; 
 }
 
 thead th {
@@ -121,11 +111,11 @@ thead th {
 }
 
 thead th:first-child { 
-  border-top-left-radius: 8px; 
+    border-top-left-radius: 8px; 
 }
 
 thead th:last-child { 
-  border-top-right-radius: 8px; 
+    border-top-right-radius: 8px; 
 }
 
 tbody td {
@@ -135,12 +125,12 @@ tbody td {
 }
 
 tbody tr { 
-  cursor: pointer; 
-  transition: background .15s; 
+    cursor: pointer; 
+    transition: background .15s; 
 }
 
 tbody tr:hover { 
-  background: #F3EFC4; 
+    background: #F3EFC4; 
 }
 
 tbody tr.dipilih {
@@ -150,9 +140,9 @@ tbody tr.dipilih {
 }
 
 .kosong { 
-  text-align: center; 
-  color: var(--gold); 
-  cursor: default; 
+    text-align: center; 
+    color: var(--gold); 
+    cursor: default; 
 }
 
 .badge {
@@ -166,23 +156,22 @@ tbody tr.dipilih {
 }
 
 .badge.tersedia { 
-  background: var(--apple); 
-  color: var(--bistre); 
+    background: var(--apple); 
+    color: var(--bistre); 
 }
 
 .badge.tidak-tersedia { 
-  background: var(--gold); 
-  color: #FFF; 
+    background: var(--gold); 
+    color: #FFF; 
 }
 
 .aksi { 
-  display: flex; 
-  gap: 8px; 
-  align-items: center; 
+    display: flex; 
+    gap: 8px; align-items: center; 
 }
 
 .aksi form { 
-  margin: 0; 
+    margin: 0; 
 }
 
 .btn {
@@ -198,56 +187,56 @@ tbody tr.dipilih {
 }
 
 .btn-utama { 
-  background: var(--moss); 
-  color: var(--flax); 
+    background: var(--moss); 
+    color: var(--flax); 
 }
 
 .btn-utama:hover { 
-  background: #2A3F03; 
+    background: #2A3F03; 
 }
 
 .btn-ubah { 
-  background: var(--flax); 
-  color: var(--bistre); 
+    background: var(--flax); 
+    color: var(--bistre); 
 }
 
 .btn-ubah:hover { 
-  background: #F6EFA6; 
+    background: #F6EFA6;
 }
 
 .btn-hapus { 
-  background: var(--card); 
-  color: #A33B12; 
-  border-color: #A33B12; 
+    background: var(--card); 
+    color: #A33B12; 
+    border-color: #A33B12; 
 }
 
 .btn-hapus:hover { 
-  background: #A33B12; 
-  color: #FFF; 
+    background: #A33B12; 
+    color: #FFF; 
 }
 
 .btn-terang { 
-  background: var(--flax); 
-  color: var(--bistre); 
+    background: var(--flax); 
+    color: var(--bistre); 
 }
 
 .btn-terang:hover { 
-  background: #F6EFA6; 
+    background: #F6EFA6; 
 }
 
 .btn-batal { 
-  background: transparent; 
-  color: var(--bistre); 
-  border-color: var(--line); 
+    background: transparent; 
+    color: var(--bistre); 
+    border-color: var(--line); 
 }
 
 .btn-batal:hover { 
-  background: var(--pilih); 
+    background: var(--pilih); 
 }
 
 .btn:focus-visible { 
-  outline: 3px solid var(--apple); 
-  outline-offset: 2px; 
+    outline: 3px solid var(--apple); 
+    outline-offset: 2px; 
 }
 
 .form-grid {
@@ -292,17 +281,24 @@ tbody tr.dipilih {
 }
 
 .field .pesan { 
-  color: #A33B12; 
-  font-size: .85rem; 
-  margin-top: 4px; 
+    color: #A33B12; 
+    font-size: .85rem; 
+    margin-top: 4px; 
 }
 
 .form-aksi { 
-  display: flex; 
-  gap: 10px; 
+    display: flex; 
+    gap: 10px; 
 }
 
 @media (max-width: 700px) {
     header { padding: 18px 20px; }
     main { padding: 28px 16px 48px; }
+}
+
+tbody td .btn,
+tbody td button {
+    padding: 5px 12px;
+    font-size: .85rem;
+    border-radius: 5px;
 }
