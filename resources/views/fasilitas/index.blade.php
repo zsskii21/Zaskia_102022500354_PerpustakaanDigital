@@ -8,16 +8,19 @@
 </head>
 <body>
     <header>
+    <div>
         <h1>Perpustakaan Digital</h1>
         <p>Fasilitas dan Area</p>
+    </div>
 
-        {{-- BARU: info user + tombol logout --}}
-        <form class="inline" method="POST" action="/logout">
+    <div class="user">
+        <span>{{ auth()->user()->name }} ({{ auth()->user()->role }})</span>
+        <form method="POST" action="/logout">
             @csrf
-            <span>{{ auth()->user()->name }} ({{ auth()->user()->role }})</span>
-            <button type="submit" class="btn btn-hapus">Logout</button>
+            <button type="submit" class="btn btn-terang">Keluar</button>
         </form>
-    </header>
+    </div>
+</header>
 
     <main>
         @if (session('ok'))
